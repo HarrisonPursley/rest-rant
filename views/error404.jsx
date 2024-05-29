@@ -1,4 +1,4 @@
-// Require react and Def
+// Import react and Def
 const React = require('react')
 const Def = require('./default')
 

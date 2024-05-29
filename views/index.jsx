@@ -1,16 +1,16 @@
-// Import react and Def function
+// Import react and Def
 const React = require('react')
 const Def = require('./default')
 
-// Create home stub func and export
-function home () {
+// Create places stub func and export
+function index () {
     return(
         <Def>
             <main>
-                <h1>HOME</h1>
+                <h1>INDEX</h1>
             </main>
         </Def>
     )
 }
 
-module.exports = home
+module.exports = index

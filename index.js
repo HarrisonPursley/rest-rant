@@ -12,9 +12,14 @@ app.engine('jsx', require('express-react-views').createEngine())
 // import router from places.js
 app.use('/places', require('./controllers/places'))
 
-// callback function
+// home page
 app.get('/', (req, res) => {
     res.render('home')
+})
+
+// GET /places
+app.get('/', (req, res) => {
+    res.render('index')
 })
 
 // 404 page
