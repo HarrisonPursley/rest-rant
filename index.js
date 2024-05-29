@@ -1,9 +1,15 @@
-// declare and initialize express app
-const config = require('express')
+// require and initialize express app
+const express = require('express')
 const app = express()
+// require dotenv
+require('dotenv').config()
 // callback function
 app.get('/', (req, res) => {
     res.send('Hello world!')
 })
-// listen for port 3000
-app.listen(3000)
+// 404 page
+app/get('*', (req, res) => {
+    res.status(404).send('<h1>404 Page</h1>')
+})
+// listen for env port
+app.listen(process.env.PORT)
