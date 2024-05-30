@@ -6,8 +6,10 @@ const Def = require('./default')
 function error404 () {
     return(
         <Def>
-            <h1>Error 404: PAGE NOT FOUND</h1>
-            <p>The requested page cannot be found.</p>
+            <main>
+                <h1>Error 404: PAGE NOT FOUND</h1>
+                <p>The requested page cannot be found.</p>
+            </main>
         </Def>
     )
 }

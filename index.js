@@ -17,14 +17,14 @@ app.get('/', (req, res) => {
     res.render('home')
 })
 
-// GET /places
-app.get('/', (req, res) => {
-    res.render('index')
-})
-
 // 404 page
 app.get('*', (req, res) => {
     res.render('error404')
+})
+
+// GET /places
+app.get('/', (req, res) => {
+    res.render('places/index')
 })
 
 // listen for env port
