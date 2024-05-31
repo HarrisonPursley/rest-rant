@@ -6,8 +6,10 @@ const app = express()
 require('dotenv').config()
 
 // define view engine JSX
+app.set('views', __dirname + '/views')
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
+app.use(express.static('public'))
 
 // import router from places.js
 app.use('/places', require('./controllers/places'))
