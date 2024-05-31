@@ -5,7 +5,8 @@ app.get('/new', (req, res) => {
 })
 
 app.post('/', (req, res) => {
-    res.send('places')
+    console.log(req.body)
+    res.send('POST /places')
 })
 
 app.get('/', (req, res) => {
