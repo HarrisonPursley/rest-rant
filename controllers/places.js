@@ -4,6 +4,10 @@ app.get('/new', (req, res) => {
     res.render('places/new')
 })
 
+app.post('/', (req, res) => {
+    res.send('places')
+})
+
 app.get('/', (req, res) => {
     let places = [{
         name: 'H-Thai-ML',
