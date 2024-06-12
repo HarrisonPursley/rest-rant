@@ -1,13 +1,12 @@
-module.exports = [{
-    name: 'H-Thai-ML',
-    city: 'Seattle',
-    state: 'WA',
-    cuisines: 'Thai, Pan-Asian',
-    pic: 'https://placehold.co/250'
-}, {
-    name: 'Steiner\'s Bar and Grille',
-    city: 'Las Vegas',
-    state: 'NV',
-    cuisines: 'North American, German, Italian',
-    pic: 'https://placehold.co/250'
-}]
+const mongoose = require('mongoose')
+
+const placeSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  pic: String,
+  cuisines: { type: String, required: true },
+  city: { type: String, default: 'Anytown' },
+  state: { type: String, default: 'USA' },
+  founded: Number
+})
+
+module.exports = mongoose.model('Place', placeSchema)
