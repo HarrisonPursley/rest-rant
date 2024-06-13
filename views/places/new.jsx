@@ -37,6 +37,28 @@ function new_form () {
                         <input className="btn btn-primary" type="submit" value="Add Place" />
                     </form>
                 </div>
+                <div>
+                    <h1>Add a New Comment</h1>
+                        <form method="POST" action="/places">
+                            <div className="form-group">
+                                <label htmlFor="author">Username</label>
+                                <input type='text' className="form-control" id="author" name="author" required />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="content">Content</label>
+                                <input type='textarea' className="form-control" id="content" name="content" required />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="rating">Rating</label>
+                                <input type='number' step='0.5' className="form-control" id="rating" name="author" />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="rant">Rant</label>
+                                <input type='checkbox' className="form-control" id="rant" name="rant" />
+                            </div>
+                            <input className="btn btn-primary" type="submit" value="Add Comment" />
+                        </form>
+                </div>
             </main>
         </Def>
     )
