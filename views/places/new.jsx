@@ -7,12 +7,16 @@ function new_form () {
     return (
         <Def>
             <main>
-                <h1>Add a New Place</h1>
+                <h1>Edit Place</h1>
                 <div>
-                    <form method="POST" action="/places">
-                        <div className="form-group">
-                            <label htmlFor="founded">Founded Year</label>
-                            <input type='number' className="form-control" id="founded" name="founded" value={new Date().getFullYear()} />
+                    <form method="POST" action={`/places/${data.place.id}?_method=PUT`}>
+                        <div className="form-group col-sm-4">
+                            <label htmlFor="founded">Founded</label>
+                            <input className="form-control"
+                                id="founded"
+                                name="founded"
+                                value={data.place.founded}
+                            />
                         </div>
                         <div className="form-group">
                             <label htmlFor="name">Place Name</label>
